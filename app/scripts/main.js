@@ -4,3 +4,7 @@ var Neuron = synaptic.Neuron,
     Network = synaptic.Network,
     Trainer = synaptic.Trainer,
     Architect = synaptic.Architect;
+    
+window.onload = function () {
+    console.log("loaded");
+};
