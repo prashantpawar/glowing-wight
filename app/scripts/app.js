@@ -11,7 +11,8 @@
 angular
   .module('workspaceApp', [
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'ngResource'
   ])
   .config(function ($routeProvider) {
     $routeProvider
