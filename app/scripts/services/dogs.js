@@ -8,7 +8,11 @@
  * Service in the workspaceApp.
  */
 angular.module('workspaceApp')
-  .service('dogs', ['ngResource', function dogs($resource) {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-    return "he";
+  .service('dogs', ['$http', function dogs($http) {
+    var _loadJSON = function (url) {
+      return $http.get(url);
+    };
+    return {
+      loadJSON:_loadJSON
+    };
   }]);

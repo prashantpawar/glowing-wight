@@ -8,10 +8,8 @@
  * Controller of the workspaceApp
  */
 angular.module('workspaceApp')
-  .controller('DogsCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('DogsCtrl', ['$scope', 'dogs', '$filter', function ($scope, dogs, $filter) {
+    dogs.loadJSON("data/dogs_by_breeds.json").then(function (a) {
+      $scope.breedData = a.data.results;
+    })
+  }]);

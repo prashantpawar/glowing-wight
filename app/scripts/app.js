@@ -12,7 +12,7 @@ angular
   .module('workspaceApp', [
     'ngRoute',
     'ngTouch',
-    'ngResource'
+    'ngTable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
